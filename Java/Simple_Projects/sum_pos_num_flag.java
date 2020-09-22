@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class sum_pos_num_flag {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int num, sum = 0, counter = 0;
+        int num, sum = 0;
         boolean flag_positive = true;
 
         while (flag_positive){
