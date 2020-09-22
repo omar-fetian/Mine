@@ -2,8 +2,7 @@ import java.util.Scanner;
 public class sum_pos_num_infinite_loop {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int num, sum = 0, counter = 0;
-        boolean flag_positive = true;
+        int num, sum = 0;
 
         while (true){
             System.out.print("Enter a positive number :");
