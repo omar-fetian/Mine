@@ -16,7 +16,8 @@ public class calculator_using_do_while {
             switch (choice){
                 case '1':   result = num1 + num2;   break;
                 case '2':    result = num1 - num2;   break;
-                case '3':    {if (num2 == 0) {System.out.println("Div by 0!");break;}  result = (float) num1 / num2;   break;}
+                case '3':    {if (num2 == 0) {System.out.println("Div by 0!");break;}  result = (float) num1 / num2;   break;} 
+                    //error the result last value will be printed so we've to stop this using Labels
                 case '0':   break;
                 default:    System.out.println("Invalid choice");
             }
