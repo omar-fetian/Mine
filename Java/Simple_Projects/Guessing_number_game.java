@@ -8,7 +8,7 @@ public class Guessing_number_game  {
         while (gameon) {
             System.out.print("Enter your guess between 1 and 100:");
             guess = in.nextInt();
-            if (guess == -1) break;
+            if (guess == -1) gameon = false;
             else if (Math.abs(guess - rand) == 0) { System.out.println("Congrats !!!"); gameon = false;}
             else if (Math.abs(guess - rand) < 5) System.out.println("so close");
             else if (Math.abs(guess - rand) < 10) System.out.println("close");
