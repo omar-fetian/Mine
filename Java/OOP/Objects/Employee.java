@@ -17,13 +17,13 @@ public class Employee {
         Resident = resident;
     }
     public Employee(int emp_ID, String name, String depart, double salary, double bonus, boolean resident){
-        this(emp_ID, name);    Depart = depart;    Salary = salary;    Bonus = bonus;  Resident = resident;
+        this(emp_ID, name, resident);    Depart = depart;    Salary = salary;    Bonus = bonus;
     }
     public void setSalary(double salary){
         Salary = salary;
     }
     public void setSalary(double salary, double bonus){
-        Salary = salary;    Bonus = bonus;
+        this.setSalary(salary);    Bonus = bonus;
     }
     public void setDepart(String depart){
         Depart = depart;
@@ -32,7 +32,7 @@ public class Employee {
         Emp_ID = emp_ID;
     }
     public void printEmployeeData(){
-        System.out.printf("Employee ID: %d\nEmployee name : %s\nDepartment : %s\nSalary : %1.2f\nBonus : %1.2f\n",
-                Emp_ID, Name, Depart, Salary, Bonus);
+        System.out.printf("Employee ID: %d\nEmployee name : %s\nDepartment : %s\nSalary : %1.2f\nBonus : %1.2f\nResident :%b\n",
+                Emp_ID, Name, Depart, Salary, Bonus, Resident);
     }
 }
