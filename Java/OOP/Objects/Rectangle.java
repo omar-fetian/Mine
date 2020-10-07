@@ -1,34 +1,53 @@
 package com.MyClass;
 
-import java.util.Scanner;
-
 public class Rectangle {
-    private double length, width;
-    Scanner in = new Scanner(System.in);
+    private double Length, Width;
     public Rectangle(){
-        length = 10;
-        width = 20;
-        System.out.println("a new room is created with length "+length +" and width "+width);
+        Length = 10;
+        Width = 20;
     }//default length and width is set with the object creation
-    public Rectangle(double l, double w){
-        length = l;     width = w;
-        System.out.println("a new room is created with length "+length +" and width "+width);
+    public Rectangle(double length, double width){
+        Length = length;     Width = width;
     }//construction executed with the object creation
-    public void setLength(double L){
-        if (L > 0)     length = L;
+    public Rectangle(Rectangle src){
+        this.Width = src.Width;     this.Length = src.Length;
+    }
+    public void setLength(double length){
+        if (length > 0)     Length = length;
         else System.out.println("data rejected, negative input");
     }
-    public void setWidth(double W){
-        if (W > 0)     width = W;
+    public void setWidth(double width){
+        if (width > 0)     Width = width;
         else System.out.println("data rejected, negative input");
     }
     public double getLength(){
-        return length;
+        return Length;
     }
     public double getWidth(){
-        return width;
+        return Width;
     }
     public double getArea(){
-        return width * length;
+        return Width * Length;
+    }
+    public static Rectangle SumOfRectangles(Rectangle a, Rectangle b){
+        Rectangle sum = new Rectangle();
+        sum.Width = a.Width + b.Width;
+        sum.Length = a.Length + b.Length;
+        return sum;
+    }
+    public Rectangle SumOfRectangles(Rectangle a){
+        Rectangle sum = new Rectangle();
+        sum.Width = a.Width + this.Width;
+        sum.Length = a.Length + this.Length;
+        return sum;
+    }
+    public static boolean isEqual(Rectangle a, Rectangle b){
+        return a.Length == b.Length && a.Width == b.Width;
+    }
+    public void copyTo(Rectangle a){
+        a.Width = this.Width;   a.Length = this.Length;
+    }
+    public String toString(){
+        return "Room Length is " + this.Length + ", and Width is " + this.Width;
     }
 }
