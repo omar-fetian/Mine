@@ -34,13 +34,10 @@ public class Student extends Person {
     }
     public String toString() {
         return "Student{" +
-                "Name='" + super.getName() + '\'' +
-                ", Address='" + super.getAddress() + '\'' +
-                ", Nationality='" + super.getNationality() + '\'' +
-                ", Age=" + super.getAge() +
-                ", StudyLevel='" + StudyLevel + '\'' +
-                ", Specialization='" + Specialization + '\'' +
-                ", GPA='" + GPA + '\'' +
+                super.toString() +
+                "Specialization='" + Specialization + '\'' +
+                ", GPA=" + GPA +
+                ", StudyLevel=" + StudyLevel +
                 '}';
-    }
+    }//overriding
 }
