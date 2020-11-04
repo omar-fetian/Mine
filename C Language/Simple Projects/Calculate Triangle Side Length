@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include "math.h"
+
+#define pi 3.141592
+int main() {
+    float ab, bc, cd, theta;
+    printf("Enter 2 Triangle sides and the angle between them (ab bc theta):");
+    scanf("%f %f %f", &ab, &bc, &theta);
+    cd =sqrt(pow(ab, 2) + pow(bc, 2) - 2*ab*bc*cos(theta*pi/180));
+    printf("cd = %f", cd);
+
+    return 0;
+}
